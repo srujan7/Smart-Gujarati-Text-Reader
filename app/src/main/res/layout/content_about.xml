@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="example.srujan.com.gujaratitextreader.About"
+    tools:showIn="@layout/activity_about">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="64dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/developedBy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="The application is developed by" />
+
+            <TextView
+                android:id="@+id/developerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/developedBy"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:text="Srujan Barai"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/colorPrimary"
+                android:textStyle="bold" />
+
+            <net.grobas.view.PolygonImageView
+                android:id="@+id/avatar"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_below="@id/developerName"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/myavatar"
+                app:poly_border="true"
+                app:poly_border_color="@android:color/white"
+                app:poly_border_width="5dp"
+                app:poly_shadow="true"
+                app:poly_shadow_color="@color/colorPrimary"
+                app:poly_vertices="0" />
+
+            <ImageView
+                android:id="@+id/devider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/avatar"
+                android:background="#aa3c3c3c" />
+
+            <TextView
+                android:id="@+id/share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/devider1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="To share it with your friends\nClick below." />
+
+            <ImageView
+                android:id="@+id/shareImage"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@+id/share"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/shareicon" />
+
+            <ImageView
+                android:id="@+id/devider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/shareImage"
+                android:background="#aa3c3c3c" />
+
+            <TextView
+                android:id="@+id/contactMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/devider2"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:gravity="center"
+                android:text="For any suggestions/bugs reports/appreciation contact me here." />
+
+            <LinearLayout
+                android:id="@+id/contactMeButtonContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:orientation="horizontal"
+                android:layout_below="@id/contactMe">
+
+                <ImageView
+                    android:id="@+id/whatsappicon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:src="@drawable/whatsappicon"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"/>
+
+                <ImageView
+                    android:id="@+id/gmailicon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:src="@drawable/gmailicon" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/devider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_below="@+id/contactMeButtonContainer"
+                android:background="#aa3c3c3c" />
+
+            <TextView
+                android:id="@+id/appVersion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:layout_below="@id/devider3"
+                android:gravity="center"/>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Check updates"
+                android:layout_below="@id/appVersion"
+                android:layout_centerHorizontal="true"
+                android:onClick="checkUpdate"
+                android:gravity="center"
+                android:layout_margin="8dp"
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

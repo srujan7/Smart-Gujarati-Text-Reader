@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="example.srujan.com.gujaratitextreader.Tutorial"
+    tools:showIn="@layout/activity_tutorial">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="32dp"
+                android:gravity="center"
+                android:text="Whenever you come across any text that is in Gujarati and you cannot read it."/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv1"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/tutimage1" />
+
+            <ImageView
+                android:id="@+id/devider1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="16dp"
+                android:background="#aa3c3c3c" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Just select the text and copy it."/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv2"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/tutimage2" />
+
+            <ImageView
+                android:id="@+id/devider2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="16dp"
+                android:background="#aa3c3c3c" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="As soon as you copy it, an icon will appear under the left top corner."/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv3"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/tutimage3" />
+
+            <ImageView
+                android:id="@+id/devider3"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginBottom="16dp"
+                android:background="#aa3c3c3c" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:gravity="center"
+                android:text="Click on the icon to read the gujarati text successfully. "/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/iv4"
+                android:layout_gravity="center_horizontal"
+                android:src="@drawable/tutimage4" />
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:gravity="center"
+                android:text="Click below icon too see an example. \n(The app works with any other application just like it works with whatsapp)" />
+
+            <ImageView
+                android:id="@+id/testservice"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:padding="8dp"
+                android:layout_gravity="center"
+                android:src="@drawable/testservice"
+                android:onClick="openExample"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="8dp"
+                android:textStyle="bold"
+                android:textColor="#880000"
+                android:text="Please note"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:gravity="center"
+                android:text="@string/notice" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
