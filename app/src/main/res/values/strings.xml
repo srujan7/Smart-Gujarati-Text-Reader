@@ -2,10 +2,10 @@
     <string name="app_name">Smart Gujarati Reader</string>
     <string name="title_activity_about">About</string>
     <string name="title_activity_tutorial">Tutorial</string>
-    <string name="notice">This app uses background service to constantly check your copied content.
-        Sometimes when your phone needs more memory or has less battery, Android kills background services.
-        In such cases you have to manually open the app and click \"Start Service\" button to start it again.</string>
+    <string name="notice">શું તમારે વારંવાર \'Start service\' પર ક્લિક કરવુ પડે છે?
+        અથવા મેસેજ કૉપી કરવા છતા આઈકોન નથી બતાવતુ?
+        આનો ઉકેલ મેળવવા માટે \'Settings\' માં જઈ \'Foreground service\' select કરો. </string>
     <string name="title_activity_example">Example</string>
-    <string name="versionName">1.7.1 (Beta)</string>
+    <string name="versionName">2.0.16 (Beta)</string>
     <string name="title_activity_survey">Survey</string>
 </resources>

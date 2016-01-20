@@ -55,6 +55,14 @@
             android:label="@string/title_activity_survey"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
+        <activity
+            android:name=".Settings"
+            android:label="Settings" >
+        </activity>
+        <activity android:name=".CheckPopup" >
+        </activity>
+        <activity android:name=".ReadMessage" >
+        </activity>
     </application>
 
 </manifest>

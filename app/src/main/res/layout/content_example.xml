@@ -74,10 +74,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:padding="16dp"
         android:textSize="24dp"
         android:background="#6677dd"
         android:textColor="@android:color/white"
-        android:text="Were you able to see a Blue popup with Gujarati text inside it?"
+        android:text="Were you able to see a popup message with Gujarati text inside it?"
         android:gravity="center"
         android:visibility="gone"/>
 

@@ -106,6 +106,7 @@ public class FloatingFaceBubbleService extends Service {
                         layoutOfPopup = new LinearLayout(getBaseContext());
                         buttonContainer = new LinearLayout(getBaseContext());
 
+                        //Creating the Divider
                         insidePopupButton.setText("OK");
                         insidePopupButton2.setText("Read full");
                         LinearLayout.LayoutParams lp =
@@ -113,6 +114,7 @@ public class FloatingFaceBubbleService extends Service {
                         lp.setMargins(10, 10, 10, 10);
                         divider.setLayoutParams(lp);
                         divider.setBackgroundColor(Color.WHITE);
+
                         Typeface tf = Typeface.createFromAsset(getAssets(), "shruti.ttf");
                         popupText.setTypeface(tf);
                         clipboard = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
@@ -120,7 +122,6 @@ public class FloatingFaceBubbleService extends Service {
                         s = clipboard.getPrimaryClip().getItemAt(0).getText().toString();
                         popupText.setText(s);
                         popupText.setTextColor(Color.parseColor("#ffffff"));
-//                    popupText.setText("This is Popup Window.press OK to dismiss it.");
                         popupText.setPadding(0, 0, 0, 20);
                         layoutOfPopup.setOrientation(LinearLayout.VERTICAL);
                         buttonContainer.setOrientation(LinearLayout.HORIZONTAL);

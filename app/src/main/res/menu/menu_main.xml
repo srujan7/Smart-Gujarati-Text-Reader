@@ -5,11 +5,17 @@
     xmlns:context="example.srujan.com.gujaratitextreader.MainActivity">
     <item
         android:id="@+id/example"
-        android:title="Example"
-        android:showAsAction="never"/>
+        android:title="Example" />
+    <item
+        android:id="@+id/problem"
+        android:title="Problem?"/>
+    <item
+        android:id="@+id/test"
+        android:title="Take test"/>
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"/>
     <item
         android:id="@+id/about"
-        android:title="About"
-        android:showAsAction="never"/>
-
+        android:title="About" />
 </menu>

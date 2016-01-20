@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false"
+    tools:context="example.srujan.com.gujaratitextreader.Settings">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select the type of service."
+            android:textSize="20dp" />
+
+        <RadioGroup
+            android:id="@+id/rg1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/a1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forground Service" />
+
+                <ImageButton
+                    android:id="@+id/help1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="0dp"
+                    android:background="#00ffffff"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/help"
+                    android:onClick="helpClick"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/a2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Background service" />
+
+                <ImageButton
+                    android:id="@+id/help2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="0dp"
+                    android:background="#00ffffff"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/help"
+                    android:onClick="helpClick"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Select what happens when the Blue icon is clicked."
+            android:textSize="20dp" />
+
+        <RadioGroup
+            android:id="@+id/rg2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/b1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Open popup." />
+
+                <ImageButton
+                    android:id="@+id/help3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="0dp"
+                    android:background="#00ffffff"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/help"
+                    android:onClick="helpClick"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/b2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Launch app." />
+
+                <ImageButton
+                    android:id="@+id/help4"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="0dp"
+                    android:background="#00ffffff"
+                    android:layout_marginLeft="15dp"
+                    android:src="@drawable/help"
+                    android:onClick="helpClick"
+                    android:scaleType="fitCenter"
+                    android:adjustViewBounds="true"/>
+
+            </LinearLayout>
+        </RadioGroup>
+    </LinearLayout>
+</ScrollView>

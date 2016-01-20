@@ -26,6 +26,8 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginTop="32dp"
                 android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
                 android:text="Whenever you come across any text that is in Gujarati and you cannot read it."/>
 
             <ImageView
@@ -50,6 +52,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
                 android:text="Just select the text and copy it."/>
 
             <ImageView
@@ -74,6 +78,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:gravity="center"
+                android:textSize="20dp"
+                android:textStyle="bold"
                 android:text="As soon as you copy it, an icon will appear under the left top corner."/>
 
             <ImageView
@@ -98,7 +104,21 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:gravity="center"
-                android:text="Click on the icon to read the gujarati text successfully. "/>
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Click on the icon to open popup where you can read the gujarati text successfully. "/>
+
+            <TextView
+                android:id="@+id/caution"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:textSize="15dp"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="(Your phone does not support popup messages. Whenever you click on the icon, a page will open where you will be able to read the Gujarati message.)"
+                android:visibility="gone"
+                android:textColor="#ff4466"/>
 
             <ImageView
                 android:layout_width="wrap_content"
@@ -113,6 +133,7 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:gravity="center"
+                android:visibility="gone"
                 android:text="Click below icon too see an example. \n(The app works with any other application just like it works with whatsapp)" />
 
             <ImageView
@@ -122,6 +143,7 @@
                 android:padding="8dp"
                 android:layout_gravity="center"
                 android:src="@drawable/testservice"
+                android:visibility="gone"
                 android:onClick="openExample"/>
 
             <TextView
@@ -130,6 +152,7 @@
                 android:paddingLeft="8dp"
                 android:textStyle="bold"
                 android:textColor="#880000"
+                android:visibility="gone"
                 android:text="Please note"/>
 
             <TextView
@@ -137,6 +160,7 @@
                 android:layout_height="wrap_content"
                 android:padding="8dp"
                 android:gravity="center"
+                android:visibility="gone"
                 android:text="@string/notice" />
 
 

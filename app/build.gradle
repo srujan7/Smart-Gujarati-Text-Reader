@@ -8,8 +8,8 @@ android {
         applicationId "example.srujan.com.gujaratitextreader"
         minSdkVersion 11
         targetSdkVersion 18
-        versionCode 11
-        versionName "1.7.1(Beta)"
+        versionCode 12
+        versionName "2.0.16(Beta)"
     }
     buildTypes {
         release {
@@ -23,7 +23,6 @@ repositories {
         url "https://jitpack.io"
     }
 }
-
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    android:id="@+id/MainAct"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -111,13 +113,15 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginTop="8dp"
                     android:paddingLeft="4dp"
-                    android:text="Please Note"
+                    android:text="TIP:"
                     android:textColor="#880000" />
 
                 <TextView
+                    android:id="@+id/notice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:textSize="16dp"
                     android:layout_margin="8dp"
                     android:paddingBottom="8dp"
                     android:paddingLeft="8dp"
@@ -126,9 +130,17 @@
 
                 <Button
                     android:id="@+id/survey"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Surver"
+                    android:text="Facing problems?\nClick here"
+                    android:background="#ff6644"
+                    android:textColor="@android:color/white"
+                    android:textStyle="italic"
+                    android:layout_gravity="center"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:paddingBottom="4dp"
+                    android:paddingTop="4dp"
                     android:gravity="center"
                     android:onClick="buttonClick"/>
 

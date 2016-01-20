@@ -64,7 +64,7 @@ public class About extends AppCompatActivity {
                     "mailto", "srujanbarai75@gmail.com", null));
             emailIntent.putExtra(Intent.EXTRA_SUBJECT, "Smart Gujarati text reader (Version " + getResources().getString(R.string.versionName) + ")");
             emailIntent.putExtra(Intent.EXTRA_TEXT, "");
-            String[] addresses = {"srujanbarai75@gmail.com"};
+            String[] addresses = {"spoonmoondevelopers@gmail.com"};
             emailIntent.putExtra(Intent.EXTRA_EMAIL, addresses); // String[] addresses
             startActivity(Intent.createChooser(emailIntent, "Send email via"));
         }

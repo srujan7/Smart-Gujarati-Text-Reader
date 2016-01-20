@@ -182,12 +182,12 @@ public class Example extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        preferences = PreferenceManager.getDefaultSharedPreferences(this);
-        if(preferences.getBoolean("isDemoRunning",false)){
-            Toast.makeText(this,"Press OK to complete the tutorial",Toast.LENGTH_LONG).show();
-        }else {
+//        preferences = PreferenceManager.getDefaultSharedPreferences(this);
+//        if(preferences.getBoolean("isDemoRunning",false)){
+//            Toast.makeText(this,"Press OK to complete the tutorial",Toast.LENGTH_LONG).show();
+//        }else {
             super.onBackPressed();
-        }
+//        }
     }
 
     @Override

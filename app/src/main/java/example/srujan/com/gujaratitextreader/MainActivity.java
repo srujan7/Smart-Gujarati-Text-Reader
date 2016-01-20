@@ -2,9 +2,11 @@ package example.srujan.com.gujaratitextreader;
 
 import android.app.AlertDialog;
 import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Handler;
@@ -12,11 +14,16 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -50,8 +57,7 @@ public class MainActivity extends AppCompatActivity {
                 setZoomButtonVisibility("INVISIBLE");
             }
         };
-        zoomButtonVisibilityToggle.postDelayed(runnable, 5000);
-
+        zoomButtonVisibilityToggle.postDelayed(runnable, 3000);
 
         Calendar now = Calendar.getInstance();
         Calendar lastAppOpenedDate = Calendar.getInstance();
@@ -64,15 +70,17 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
 
         final TextView textView = (TextView) findViewById(R.id.textView);
+        TextView textView1 = (TextView) findViewById(R.id.notice);
         Typeface tf = Typeface.createFromAsset(getAssets(), "shruti.ttf");
         textView.setTypeface(tf);
+        textView1.setTypeface(tf);
         textSize = textView.getTextSize();
         textView.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 zoomButtonVisibilityToggle.removeCallbacks(runnable);
                 setZoomButtonVisibility("VISIBLE");
-                zoomButtonVisibilityToggle.postDelayed(runnable, 5000);
+                zoomButtonVisibilityToggle.postDelayed(runnable, 3000);
                 return false;
             }
         });
@@ -82,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textSize += 2.0;
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_PX,textSize);
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
             }
         });
         Button zoomOut = (Button) findViewById(R.id.zoomOut);
@@ -90,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 textSize -= 2.0;
-                textView.setTextSize(TypedValue.COMPLEX_UNIT_PX,textSize);
+                textView.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize);
             }
         });
 
@@ -124,25 +132,16 @@ public class MainActivity extends AppCompatActivity {
             });
             builder.show();
         }
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && preferences.getBoolean("showLollipopError",true)){
+        if((Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP && !(preferences.getBoolean("testTaken",false)))){
             AlertDialog.Builder dialog = new AlertDialog.Builder(MainActivity.this);
-            dialog.setTitle("Sorry");
+            dialog.setTitle("Oops");
             dialog.setMessage("Seems you are using Android 5.0 or plus. This app might not work as expected. " +
-                    "According to Google announcements Android 5.0+ will support Gujarati fonts by default. " +
-                    "You can still give it a try. " +
-                    "For any queries contact us from about page.");
+                    "Please take a small test before you proceed.");
             dialog.setCancelable(false);
-            dialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+            dialog.setPositiveButton("Take test", new DialogInterface.OnClickListener() {
                 @Override
                 public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            });
-            dialog.setNegativeButton("Never show again", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    editor.putBoolean("showLollipopError",false);
-                    editor.apply();
+                    startActivity(new Intent(MainActivity.this,CheckPopup.class));
                     dialog.dismiss();
                 }
             });
@@ -194,7 +193,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void buttonClick(View view) {
         if(view.getId() == R.id.button) {
-            Intent intent = new Intent(this,Tutorial.class);
+            Intent intent = new Intent(this,ReadMessage.class);
             startActivity(intent);
         }
         else if(view.getId() == R.id.button2){
@@ -232,8 +231,17 @@ public class MainActivity extends AppCompatActivity {
         if(id == R.id.about){
             startActivity(new Intent(MainActivity.this,About.class));
         }
+        if(id == R.id.problem){
+            startActivity(new Intent(MainActivity.this,Survey.class));
+        }
+        if (id == R.id.test){
+            startActivity(new Intent(MainActivity.this,CheckPopup.class));
+        }
         if(id == R.id.example){
             startActivity(new Intent(MainActivity.this,Example.class));
+        }
+        if(id == R.id.settings){
+            startActivity(new Intent(MainActivity.this,Settings.class));
         }
         return true;
     }
